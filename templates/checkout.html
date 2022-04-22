@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Checkout || Styles Cortinas y persianas {% endblock %}
+{% block content %}
+  <!-- banner-2 -->
+
+	<div class="page-head_agile_info_w3l">
+
+
+	</div>
+	<!-- //banner-2 -->
+	<!-- page -->
+	<div class="services-breadcrumb">
+		<div class="agile_inner_breadcrumb">
+			<div class="container">
+				<ul class="w3_short">
+					<li>
+						<a href="/">Inicio</a>
+						<i>|</i>
+					</li>
+					<li>Checkout</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //page -->
+	<!-- checkout page -->
+	<div class="privacy py-sm-5 py-4">
+		<div class="container py-xl-4 py-lg-2">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+				<span>C</span>heckout
+			</h3>
+			<!-- //tittle heading -->
+			<div class="checkout-right">
+				<h4 class="mb-sm-4 mb-3">Su carrito contiene:
+					<span class="items-count"></span> <span>productos</span>
+				</h4>
+				<!---/------- Content Generated Whith Javascript -------\--->
+				  <div class="table-responsive" >
+				    <table class="timetable_sub" id="checkout-box">
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Producto</th>
+								<th>Cantidad</th>
+								<th>Nombre producto</th>
+								<th>Precio</th>
+								<th>Remover</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							
+						</tbody>
+					</table>
+				  </div>
+				<!---/------- Content Generated Whith Javascript -------\--->
+			</div>
+			{% block validation %}
+			  {% include "validate.html" %}
+			{% endblock %}
+		</div>
+	</div>
+	<!-- //checkout page -->
+{% endblock %}
+
+{% block scripts %} 
+  <!---<script src="{% static 'products/js/data.js' %}" type="text/javascript" ></script>
+  <script src="{% static 'products/js/recents.js' %}" type="text/javascript"></script>--->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="{% static 'products/js/checklist.js' %}" type="text/javascript"></script>
+{% endblock %}
