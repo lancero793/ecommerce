@@ -38,3 +38,17 @@ def load(request):
   if request.is_ajax():
     return JsonResponse({"lasts" : all_products})
   return render(request, "index.html")
+
+
+
+def privacy(request):
+  return render(request, "privacy.html")
+
+def terminos(request):
+  return render(request, "terms.html")
+
+def ayuda(request):
+  return render(request, "help.html")
+
+def contact(request):
+  return render(request, "contact.html")

@@ -12,8 +12,12 @@ class Product(models.Model):
     color = models.ManyToManyField(Color)
     description = models.TextField(max_length=1000)
     image = models.CharField(max_length=1000)
+    image1 = models.CharField(max_length=1000)
+    image2 = models.CharField(max_length=1000)
     bio = models.CharField(max_length=100, default="Sobre medidas")
     offert = models.BooleanField(default=False)
+    stock = models.IntegerField(default=1, null=False, blank=False)
+    
     
     def __str__(self):
         return str(self.name)

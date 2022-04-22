@@ -39,15 +39,15 @@
 							<ul class="slides">
 								<li data-thumb="{% static 'images/si1.jpg' %}">
 									<div class="thumb-image">
-										<img src="{% static 'images/si1.jpg' %}" data-imagezoom="true" class="img-fluid" alt=""> </div>
+										<img src="{{ product.image }}" data-imagezoom="true" class="img-fluid" alt=""> </div>
 								</li>
 								<li data-thumb="images/si2.jpg">
 									<div class="thumb-image">
-										<img src="{% static 'images/si2.jpg' %}" data-imagezoom="true" class="img-fluid" alt=""> </div>
+										<img src="{{ product.image1 }}" data-imagezoom="true" class="img-fluid" alt=""> </div>
 								</li>
 								<li data-thumb="{% static 'images/si3.jpg' %}">
 									<div class="thumb-image">
-										<img src="{% static 'images/si3.jpg' %}" data-imagezoom="true" class="img-fluid" alt=""> </div>
+										<img src="{{ product.image2 }} data-imagezoom="true" class="img-fluid" alt=""> </div>
 								</li>
 							</ul>
 							<div class="clearfix"></div>
@@ -56,32 +56,46 @@
 				</div>
 
 				<div class="col-lg-7 single-right-left simpleCart_shelfItem">
-					<h3 class="mb-3">{{ product.name }}</h3>
+					<ul class="w3_short">
+						<li>
+							<span class="item_price">{{ product.name }}</span>
+							<i>|</i>
+						</li>
+						<li>Categoria</li>
+						<i>|</i>
+						<li>{{ product.category }}Cortinas</li>
+					</ul>
 					<p class="mb-3">
+					{% if product.offert %}
 						<span class="item_price">${{ product.price }}</span>
 						<del class="mx-2 font-weight-light">$280.00</del>
-						<label>Envio Gratis</label>
+					{% else %}
+						<span class="item_price">${{ product.price }}</span>
+					<!-- <del class="mx-2 font-weight-light">$280.00</del> -->
+					{% endif %}
+						<label>Envio o instalaciòn Gratis</label>
 					</p>
 					<div class="single-infoagile">
 						<ul>
 							<li class="mb-3">
-								Cash on Delivery Eligible.
+								<span style="color:rgb(0, 119, 255);">Stock:</span> <span>({{ product.stock }}/Mts)</span>
 							</li>
 							<li class="mb-3">
-								Shipping Speed to Delivery.
+								<span style="color:rgb(0, 119, 255);">Tipo Corte:</span> <span>{{ product.bio}}</span>
 							</li>
 							<li class="mb-3">
-								EMIs from $655/month.
+								<span style="color:rgb(0, 119, 255);">Description:</span> <span>{{ product.description }}</span>
 							</li>
 							<li class="mb-3">
-								Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C
+								<span style="color:rgb(0, 119, 255);">20% Descuento:</span> <span>pago en efectivo</span>
+								 
 							</li>
 						</ul>
 					</div>
 					<div class="product-single-w3l">
 						<p class="my-3">
 							<i class="far fa-hand-point-right mr-2"></i>
-							<label>1 Year</label>Manufacturer Warranty</p>
+							<label>1 Año</label>Garantia defectos de fabricacion</p>
 						<ul>
 							<li class="mb-1">
 								3 GB RAM | 16 GB ROM | Expandable Upto 256 GB
@@ -100,7 +114,7 @@
 							</li>
 						</ul>
 						<p class="my-sm-4 my-3">
-							<i class="fas fa-retweet mr-3"></i>Net banking & Credit/ Debit/ ATM card
+							<i class="fas fa-retweet mr-3"></i>Recibimos todos los medios de pago.
 						</p>
 					</div>
 					<div class="occasion-cart">
