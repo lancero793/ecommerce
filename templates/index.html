@@ -6,6 +6,8 @@
     {% include "banner.html" %}
 {% endblock %}
 
+
+
 <!--- Block Content ---->
 {% block content %}
 	<!-- top Products -->
@@ -25,180 +27,23 @@
 						<!-- first section -->
 						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
 							<h3 class="heading-tittle text-center font-italic">Cortinas</h3>
-							<div class="row">
-							    {% for product in products %}
-								<div class="col-md-4 product-men mt-5">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center">
-											<img class="image-fluid" src="{{ product.image }}" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="{% url 'details' product.id %}" class="link-product-add-cart">Vista Rápida</a>
-												</div>
-											</div>
-											{% if product.offert %}
-											    <span class="product-new-top">Oferta</span>
-											{% endif %}
-										</div>
-										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="single.html">{{ product.name }}</a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price">${{ product.price }}</span>
-												<del>${{ product.price }}</del>
-											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="{{ product.name }}" />
-														<input type="hidden" name="amount" value="{{ product.price }}" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="COP" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Añadir al carrito" class="button btn" />
-													</fieldset>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-								{% endfor %}
-							</div>
+							<!--- Content Generated with js --->
+							<div class="row" id="output"> </div> 
 						</div>
 						<!-- //first section -->
 						<!-- second section -->
 						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
-							<h3 class="heading-tittle text-center font-italic">Tv & Audio</h3>
-							<div class="row">
-								<div class="col-md-4 product-men mt-5">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center">
-											<img src="{% static 'images/m4.jpg' %}" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-										</div>
-										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="single.html">Sony 80 cm (32 inches)</a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price">$320.00</span>
-												<del>$340.00</del>
-											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Sony 80 cm (32 inches)" />
-														<input type="hidden" name="amount" value="320.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="USD" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
-													</fieldset>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4 product-men mt-5">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center">
-											<img src="{% static 'images/m5.jpg' %}" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
-
-										</div>
-										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="single.html">Artis Speaker</a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price">$349.00</span>
-												<del>$399.00</del>
-											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Artis Speaker" />
-														<input type="hidden" name="amount" value="349.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="USD" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
-													</fieldset>
-												</form>
-											</div>
-
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4 product-men mt-5">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center">
-											<img src="{% static 'images/m6.jpg' %}" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-										</div>
-										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="single.html">Philips Speakers</a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price">$249.00</span>
-												<del>$300.00</del>
-											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Philips Speakers" />
-														<input type="hidden" name="amount" value="249.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="USD" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
-													</fieldset>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							<h3 class="heading-tittle text-center font-italic">Lo más reciente</h3>
+							<div class="row" id="more-recent"></div>
 						</div>
 						<!-- //second section -->
 						<!-- third section -->
 						<div class="product-sec1 product-sec2 px-sm-5 px-3">
 							<div class="row">
-								<h3 class="col-md-4 effect-bg">Summer Carnival</h3>
-								<p class="w3l-nut-middle">Get Extra 10% Off</p>
+								<h3 class="col-md-4 effect-bg">20 Julio</h3>
+								<p class="w3l-nut-middle">10% Dcto Extra</p>
 								<div class="col-md-8 bg-right-nut">
-									<img src="{% static 'images/image1.png' %}" alt="">
+									<img src="{% static 'project/images/image1.png' %}" id="image-offert"alt="">
 								</div>
 							</div>
 						</div>
@@ -210,7 +55,7 @@
 								<div class="col-md-4 product-men mt-5">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center">
-											<img src="{% static 'images/m7.jpg' %}" alt="">
+											<img src="{% static 'project/images/m7.jpg' %}" alt="">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -249,7 +94,7 @@
 								<div class="col-md-4 product-men mt-5">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center">
-											<img src="{% static 'images/m8.jpg' %}" alt="">
+											<img src="{% static 'project/images/m8.jpg' %}" alt="">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -287,7 +132,7 @@
 								<div class="col-md-4 product-men mt-5">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center">
-											<img src="{% static 'images/m9.jpg' %}" alt="">
+											<img src="{% static 'project/images/m9.jpg' %}" alt="">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -508,11 +353,11 @@
 						<!-- //electronics -->
 						<!-- delivery -->
 						<div class="left-side border-bottom py-2">
-							<h3 class="agileits-sear-head mb-3">Cash On Delivery</h3>
+							<h3 class="agileits-sear-head mb-3">Métodos de pago</h3>
 							<ul>
 								<li>
 									<input type="checkbox" class="checked">
-									<span class="span">Contra entrega </span>
+									<span class="span">Pago contra entrega </span>
 								</li>
 							</ul>
 						</div>
@@ -539,7 +384,7 @@
 								<div class="scroll">
 									<div class="row">
 										<div class="col-lg-3 col-sm-2 col-3 left-mar">
-											<img src="{% static 'images/k1.jpg' %}" alt="" class="img-fluid">
+											<img src="{% static 'project/images/k1.jpg' %}" alt="" class="img-fluid">
 										</div>
 										<div class="col-lg-9 col-sm-10 col-9 w3_mvd">
 											<a href="">Samsung Galaxy On7 Prime (Gold, 4GB RAM + 64GB Memory)</a>
@@ -548,7 +393,7 @@
 									</div>
 									<div class="row my-4">
 										<div class="col-lg-3 col-sm-2 col-3 left-mar">
-											<img src="{% static 'images/k2.jpg' %}" alt="" class="img-fluid">
+											<img src="{% static 'project/images/k2.jpg' %}" alt="" class="img-fluid">
 										</div>
 										<div class="col-lg-9 col-sm-10 col-9 w3_mvd">
 											<a href="">Haier 195 L 4 Star Direct-Cool Single Door Refrigerator</a>
@@ -557,7 +402,7 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-3 col-sm-2 col-3 left-mar">
-											<img src="{% static 'images/k3.jpg' %}" alt="" class="img-fluid">
+											<img src="{% static 'project/images/k3.jpg' %}" alt="" class="img-fluid">
 										</div>
 										<div class="col-lg-9 col-sm-10 col-9 w3_mvd">
 											<a href="">Ambrane 13000 mAh Power Bank (P-1310 Premium)</a>
@@ -589,7 +434,7 @@
 								<p>Sale up to 25% off all in store</p>
 							</div>
 							<div class="col-sm-5 offerimg-w3l">
-								<img src=" {% static 'images/off1.png' %}" alt="" class="img-fluid">
+								<img src=" {% static 'project/images/off1.png' %}" alt="" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -603,7 +448,7 @@
 								<p>Free shipping order over $100</p>
 							</div>
 							<div class="col-sm-5 offerimg-w3l">
-								<img src="{% static 'images/off2.png' %}" alt="" class="img-fluid">
+								<img src="{% static 'project/images/off2.png' %}" alt="" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -613,4 +458,10 @@
 	</div>
 	<!-- middle section -->
 
+{% endblock %}
+
+{% block scripts %} 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="{% static 'products/js/data.js' %}" type="text/javascript" ></script>
+  <script src="{% static 'products/js/recents.js' %}" type="text/javascript"></script>
 {% endblock %}
