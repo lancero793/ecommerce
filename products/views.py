@@ -39,7 +39,21 @@ def load(request):
     return JsonResponse({"lasts" : all_products})
   return render(request, "index.html")
 
-
+def load_news(request):
+  products = Product.objects.all()[:2]
+  new_products = []
+  for product in products:
+    new_products.append({"name" : product.name, 
+                        "price" : product.price,
+                        "id" : product.id,
+                        "image" : product.image,
+                        "description" : product.description,
+                        "offert" : product.offert,
+                        "bio" : product.bio,
+    })
+  if request.is_ajax():
+    return JsonResponse({"news" : new_products})
+  return render(request, "index.html")
 
 def privacy_policy(request):
   return render(request, "privacy.html")

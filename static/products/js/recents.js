@@ -1,6 +1,6 @@
 const recentsBox = document.getElementById("more-recent")
 const imageOffert = document.getElementById("image-offert")
-//outputBox.innerText = "jiji"
+
 let image = "";
 function test(){
     $.ajax({

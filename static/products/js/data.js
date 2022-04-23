@@ -1,5 +1,5 @@
 const outputBox = document.getElementById("output")
-//outputBox.innerText = "jiji"
+
 function test(){
     $.ajax({
       type: "GET",
